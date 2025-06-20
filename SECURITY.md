@@ -5,6 +5,7 @@
 The source code is **NOT** included in this public repository for security reasons. Only the following files are shared:
 
 ### 📁 Public Files (Safe to Share)
+
 - `package.json` - Dependencies and build scripts
 - `webpack.config.js` - Build configuration (obfuscation settings)
 - `README.md` - Public documentation
@@ -13,6 +14,7 @@ The source code is **NOT** included in this public repository for security reaso
 - `GITHUB_SETUP.md` - GitHub setup guide
 
 ### 🔐 Private Files (NEVER Share)
+
 - `src/` folder - Original source code
 - `background.js, content.js, popup.js` - Root source files
 - `README_PRIVATE.md` - Implementation details
@@ -30,12 +32,14 @@ The source code is **NOT** included in this public repository for security reaso
 ## 🚀 Distribution Process
 
 ### For Public Release:
+
 1. **Build locally**: `npm run build`
 2. **Test thoroughly**: Verify extension works
 3. **Create release package**: Zip the `dist` folder
 4. **Upload to GitHub Releases**: Provide pre-built ZIP for users
 
 ### For Developers:
+
 1. Clone repository (only gets build files)
 2. Run `npm install` to get dependencies
 3. **Source code must be obtained separately** (private repo/direct sharing)
@@ -77,4 +81,4 @@ MISSING (Private):
 
 ---
 
-*🔒 This security model ensures that while the extension remains usable and the build process is transparent, the actual implementation details and logic remain protected.*
+_🔒 This security model ensures that while the extension remains usable and the build process is transparent, the actual implementation details and logic remain protected._

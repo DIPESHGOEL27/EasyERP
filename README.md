@@ -1,78 +1,91 @@
 # 🔐 EasyERP AutoLogin Chrome Extension
 
-A secure Chrome extension that automates login to ERP systems with advanced security features.
+A secure Chrome extension for automated ERP login with advanced protection features.
 
 ## ✨ Features
 
-- 🔐 **Secure auto-login** with encrypted credential storage
+- 🔐 **Secure auto-login** with encrypted local storage
 - ❓ **Smart security question handling**
 - 📱 **OTP integration** support
 - 🎨 **Modern popup interface** for credential management
-- 🛡️ **Advanced code protection** with obfuscation
-- ⚡ **Optimized performance** with webpack bundling
+- 🛡️ **Code obfuscation** for enhanced security
+- 🔒 **No data transmission** - everything stays local
 
-## 🚀 Installation
+## 🚀 Quick Installation
 
-### For Users
-
-1. **Download the latest release** from [Releases](../../releases)
-2. **Extract the ZIP file** to a folder
-3. **Load in Chrome:**
-   - Open `chrome://extensions/`
-   - Enable "Developer mode"
-   - Click "Load unpacked" and select the extracted folder
-
-### For Developers
-
-1. **Clone and setup:**
-   ```bash
-   git clone https://github.com/DIPESHGOEL27/EasyERP.git
-   cd EasyERP
-   npm install
-   ```
-
-2. **Build the extension:**
-   ```bash
-   npm run build
-   ```
-
-3. **Load the `dist` folder** in Chrome extensions
-
-## 🛠️ Available Commands
-
-- `npm run build` - Production build (obfuscated & optimized)
-- `npm run dev` - Development build
-- `npm run watch` - Development with auto-rebuild
-
-## 🔒 Security Features
-
-This extension implements multiple layers of security:
-
-- **Local encryption** of stored credentials
-- **Code obfuscation** to prevent reverse engineering
-- **No data transmission** - everything stays local
-- **Secure Chrome storage API** integration
-- **Advanced anti-tampering** protection
-
-## 📋 Requirements
-
-- **Chrome browser** (or Chromium-based browsers)
-- **ERP access** for the target system
-- **Node.js 16+** (for building from source)
+1. **Clone or download this repository**
+2. **Open Chrome and go to:** `chrome://extensions/`
+3. **Enable "Developer mode"** (toggle in top-right)
+4. **Click "Load unpacked"** and select the `dist` folder
+5. **Click the extension icon** and enter your credentials
 
 ## 🎯 Usage
 
-1. **Install the extension** following the steps above
-2. **Click the extension icon** in Chrome toolbar
-3. **Enter your credentials** in the popup interface
-4. **Visit your ERP site** - login will be automated!
+1. **Setup:** Enter credentials in the extension popup
+# 🔐 EasyERP AutoLogin Chrome Extension
 
-## 🔧 Build Information
+A secure Chrome extension for automated ERP login with advanced protection features.
 
-- **Webpack 5** for bundling and optimization
-- **JavaScript obfuscation** for code protection
-- **Terser minification** for size optimization
-- **Cross-platform compatibility**
+## ✨ Features
+
+- 🔐 **Secure auto-login** with encrypted local storage
+- ❓ **Smart security question handling**
+- 📱 **OTP integration** support
+- 🎨 **Modern popup interface** for credential management
+- 🛡️ **Code obfuscation** for enhanced security
+- 🔒 **No data transmission** - everything stays local
+
+## 🚀 Quick Installation
+
+1. **Clone or download this repository**
+2. **Open Chrome and go to:** `chrome://extensions/`
+3. **Enable "Developer mode"** (toggle in top-right)
+4. **Click "Load unpacked"** and select the `dist` folder
+5. **Click the extension icon** and enter your credentials
+
+## 🎯 Usage
+
+1. **Setup:** Enter credentials in the extension popup
+2. **Auto-login:** Visit your ERP site - it will login automatically
+3. **OTP:** The extension will prompt for OTP when needed
+4. **Security:** Questions are answered automatically
+
+## 🔒 Security & Privacy
+
+- ✅ **Local storage only** - no cloud or server communication
+- ✅ **Obfuscated code** - protected against reverse engineering  
+- ✅ **No telemetry** - zero data collection
+- ✅ **Open source** - auditable but secured
+
+## 📋 Requirements
+
+- Chrome browser (or Chromium-based browsers)
+- Access to target ERP system
+
+## 🆘 Troubleshooting
+
+- **Extension not working?** Verify you selected the `dist` folder
+- **Auto-login fails?** Check credentials are saved correctly
+- **OTP issues?** Make sure to enter the 6-digit code when prompted
+
+## 📄 File Structure
+
+```
+EasyERP/
+├── dist/                 # 🔒 Obfuscated extension files (load this folder)
+│   ├── background.js     # Protected service worker
+│   ├── content.js        # Protected auto-login script
+│   ├── popup.js          # Protected popup logic
+│   ├── popup.html        # Modern UI interface
+│   └── manifest.json     # Extension configuration
+├── INSTALL.md            # Installation guide
+├── SECURITY.md           # Security documentation
+└── README.md             # This file
+```
+
+## 🔐 Security Notes
+
+This extension uses **advanced code obfuscation** to protect against reverse engineering while maintaining full functionality. Source code is protected but the extension remains open for security auditing.
 
 ## 📄 License
 
@@ -84,10 +97,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - GitHub: [@DIPESHGOEL27](https://github.com/DIPESHGOEL27)
 - Email: dipeshgoel@kgpian.iitkgp.ac.in
 
-## ⚠️ Disclaimer
-
-This extension is for educational and personal use. Users are responsible for complying with their organization's security policies.
-
 ---
 
-*🔒 Code is protected with advanced obfuscation techniques to ensure security and prevent unauthorized modifications.*
+**Developed with ❤️ by Dipesh Goel**
+
+*For support or issues, please create an issue in this repository.*
