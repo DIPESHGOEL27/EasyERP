@@ -7,10 +7,12 @@ A secure Chrome extension for automated ERP login with advanced protection.
 ### Option 1: Direct Install (Recommended)
 
 1. **Download the extension:**
+
    - Download this repository as ZIP
    - OR clone: `git clone https://github.com/DIPESHGOEL27/EasyERP.git`
 
 2. **Install in Chrome:**
+
    - Open `chrome://extensions/`
    - Enable "Developer mode"
    - Click "Load unpacked"
@@ -45,6 +47,7 @@ A secure Chrome extension for automated ERP login with advanced protection.
 ## 🆘 Support
 
 If you encounter issues:
+
 1. Check that you're on the correct ERP website
 2. Verify credentials are saved correctly
 3. Check browser console for errors

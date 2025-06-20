@@ -22,6 +22,7 @@ A secure Chrome extension for automated ERP login with advanced protection featu
 ## 🎯 Usage
 
 1. **Setup:** Enter credentials in the extension popup
+
 # 🔐 EasyERP AutoLogin Chrome Extension
 
 A secure Chrome extension for automated ERP login with advanced protection features.
@@ -53,7 +54,7 @@ A secure Chrome extension for automated ERP login with advanced protection featu
 ## 🔒 Security & Privacy
 
 - ✅ **Local storage only** - no cloud or server communication
-- ✅ **Obfuscated code** - protected against reverse engineering  
+- ✅ **Obfuscated code** - protected against reverse engineering
 - ✅ **No telemetry** - zero data collection
 - ✅ **Open source** - auditable but secured
 
@@ -94,6 +95,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## 👨‍💻 Developer
 
 **Dipesh Goel**
+
 - GitHub: [@DIPESHGOEL27](https://github.com/DIPESHGOEL27)
 - Email: dipeshgoel@kgpian.iitkgp.ac.in
 
@@ -101,4 +103,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Developed with ❤️ by Dipesh Goel**
 
-*For support or issues, please create an issue in this repository.*
+_For support or issues, please create an issue in this repository._
