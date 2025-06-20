@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
 
+# Development configuration files (keep private)
+package.json
+package-lock.json
+webpack.config.js
+
 # Development files
 *.log
 npm-debug.log*
