@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyERP AutoLogin</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        width: 380px;
+        min-height: 500px;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        margin: 12px;
+        padding: 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .header h2 {
+        color: #2d3748;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .header .subtitle {
+        color: #718096;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        display: block;
+        color: #4a5568;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        background: #ffffff;
+        transition: all 0.2s ease;
+        outline: none;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      textarea:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        transform: translateY(-1px);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+        font-family: "Consolas", "Monaco", monospace;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .save-btn {
+        width: 100%;
+        padding: 14px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
+
+      .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .save-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .footer .developer {
+        color: #718096;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+
+      .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        vertical-align: text-bottom;
+      }
+
+      .security-note {
+        background: #f7fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin-top: 8px;
+        font-size: 11px;
+        color: #4a5568;
+        line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>🔐 EasyERP AutoLogin</h2>
+        <div class="subtitle">Secure Credential Management</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="loginId">
+          <span class="icon">👤</span>Login ID
+        </label>
+        <input type="text" id="loginId" placeholder="Enter your login ID" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">
+          <span class="icon">🔑</span>Password
+        </label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="questions">
+          <span class="icon">❓</span>Security Questions
+        </label>
+        <textarea
+          id="questions"
+          placeholder='Enter security questions in JSON format:
+{
+  "Question 1": "Answer 1",
+  "Question 2": "Answer 2",
+  "Question 3": "Answer 3"
+}'
+        ></textarea>
+        <div class="security-note">
+          💡 Store your security questions and answers in JSON format. This data
+          is stored locally and encrypted.
+        </div>
+      </div>
+
+      <button id="saveBtn" class="save-btn">💾 Save Credentials</button>
+
+      <div class="footer">
+        <div class="developer">Developed with ❤️ by Dipesh Goel</div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

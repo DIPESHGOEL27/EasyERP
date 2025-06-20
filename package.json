@@ -1,0 +1,20 @@
+{
+  "name": "easyerp-autologin",
+  "version": "1.1.0",
+  "description": "Chrome extension for EasyERP auto-login with bundling and obfuscation",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch",
+    "clean": "rimraf dist",
+    "zip": "powershell Compress-Archive -Path dist/* -DestinationPath extension.zip -Force"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "copy-webpack-plugin": "^11.0.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack-obfuscator": "^3.5.1",
+    "rimraf": "^5.0.0"
+  }
+}
