@@ -69,6 +69,7 @@ The code has been successfully pushed to:
 **https://github.com/DIPESHGOEL27/EasyERP**
 
 For future updates, simply run:
+
 ```bash
 git add .
 git commit -m "Your commit message"

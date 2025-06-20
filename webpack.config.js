@@ -23,7 +23,7 @@ module.exports = (env, argv) => {
         new TerserPlugin({
           terserOptions: {
             compress: {
-              drop_console: isProduction, // Remove console.log in production
+              drop_console: isProduction,
               drop_debugger: isProduction,
             },
             mangle: true,
@@ -49,41 +49,37 @@ module.exports = (env, argv) => {
           },
         ],
       }),
-      // Obfuscate JavaScript files in production
-      ...(isProduction
-        ? [
-            new WebpackObfuscator(
-              {
-                rotateStringArray: true,
-                stringArray: true,
-                stringArrayEncoding: ["base64"],
-                stringArrayThreshold: 0.75,
-                unicodeEscapeSequence: false,
-                identifierNamesGenerator: "hexadecimal",
-                renameGlobals: false,
-                selfDefending: true,
-                compact: true,
-                controlFlowFlattening: true,
-                controlFlowFlatteningThreshold: 0.75,
-                deadCodeInjection: true,
-                deadCodeInjectionThreshold: 0.4,
-                debugProtection: false, // Set to true for extra protection but may cause issues
-                debugProtectionInterval: false,
-                disableConsoleOutput: true,
-                domainLock: [],
-                transformObjectKeys: true,
-                splitStrings: true,
-                splitStringsChunkLength: 10,
-              },
-              ["background.js", "content.js", "popup.js"]
-            ),
-          ]
-        : []),
+      // Always obfuscate JavaScript files (even in development for security)
+      new WebpackObfuscator(
+        {
+          rotateStringArray: true,
+          stringArray: true,
+          stringArrayEncoding: ["base64"],
+          stringArrayThreshold: 0.75,
+          unicodeEscapeSequence: false,
+          identifierNamesGenerator: "hexadecimal",
+          renameGlobals: false,
+          selfDefending: true,
+          compact: true,
+          controlFlowFlattening: true,
+          controlFlowFlatteningThreshold: 0.75,
+          deadCodeInjection: true,
+          deadCodeInjectionThreshold: 0.4,
+          debugProtection: false,
+          debugProtectionInterval: false,
+          disableConsoleOutput: isProduction,
+          domainLock: [],
+          transformObjectKeys: true,
+          splitStrings: true,
+          splitStringsChunkLength: 10,
+        },
+        ["background.js", "content.js", "popup.js"]
+      ),
     ],
     resolve: {
       extensions: [".js"],
     },
     mode: argv.mode || "development",
-    devtool: isProduction ? false : "source-map",
+    devtool: false, // Never include source maps for security
   };
 };
