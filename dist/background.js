@@ -1,1 +1,1 @@
-chrome.runtime.onInstalled.addListener(()=>{});
+chrome.runtime.onInstalled.addListener(()=>{console.log("EasyERP Extension Installed")});
